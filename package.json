@@ -18,8 +18,8 @@
     "lint": "tslint --project .",
     "lint:fix": "tslint --fix --project .",
     "lint:ts": "tslint --fix 'src/**/*.{ts,tsx}' -p tsconfig.json",
-    "lint:style": "stylelint 'src/**/*.{scss,ts,css,sass,less,tsx}'",
-    "format": "prettier --write 'src/**/*.{ts,tsx,scss,md}'",
+    "lint:style": "stylelint src/**/*.{scss,ts,css,sass,less,tsx}",
+    "format": "prettier --write src/**/*.{ts,tsx,scss,md}",
     "formatAndFix": "npm run format && npm run lint:ts && npm run style"
   },
   "devDependencies": {
@@ -76,6 +76,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "@hot-loader/react-dom": "^16.13.0",
     "gatsby": "^2.20.18",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-google-tagmanager": "^2.2.1",
