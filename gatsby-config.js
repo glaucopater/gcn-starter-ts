@@ -9,6 +9,24 @@ require('ts-node').register({
 const config = require('./config/SiteConfig').default;
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
 
+let contentfulConfig;
+
+try {
+  contentfulConfig = require('./.contentful');
+} catch (e) {
+  contentfulConfig = {
+    production: {
+      spaceId: process.env.SPACE_ID,
+      accessToken: process.env.ACCESS_TOKEN,
+    },
+  };
+} finally {
+  const { spaceId, accessToken } = contentfulConfig.production;
+  if (!spaceId || !accessToken) {
+    throw new Error('Contentful space ID and access token need to be provided.');
+  }
+}
+
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {

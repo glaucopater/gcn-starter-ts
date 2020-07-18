@@ -1,0 +1,31 @@
+[
+  {
+    "ts": "2020-07-18T10:24:01.877Z",
+    "level": "error",
+    "error": {
+      "originalError": {
+        "name": "NotFound",
+        "message": "{\n  \"status\": 404,\n  \"statusText\": \"Not Found\",\n  \"message\": \"The resource could not be found.\",\n  \"details\": {},\n  \"request\": {\n    \"url\": \"3b7wpxdiy8tj\",\n    \"headers\": {\n      \"Accept\": \"application/json, text/plain, */*\",\n      \"Content-Type\": \"application/vnd.contentful.management.v1+json\",\n      \"X-Contentful-User-Agent\": \"app contentful.import/7.8.7; feature library-import; sdk contentful-management.js/5.28.0; platform node.js/v12.16.1; os Windows/10.0.17763;\",\n      \"Authorization\": \"Bearer ...DLG90\",\n      \"user-agent\": \"node.js/v12.16.1\",\n      \"Accept-Encoding\": \"gzip\"\n    },\n    \"method\": \"get\"\n  },\n  \"requestId\": \"7298ee66b51bb7a27d355938fc433720\"\n}"
+      },
+      "data": {
+        "status": 404,
+        "statusText": "Not Found",
+        "message": "The resource could not be found.",
+        "details": {},
+        "request": {
+          "url": "3b7wpxdiy8tj",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.8.7; feature library-import; sdk contentful-management.js/5.28.0; platform node.js/v12.16.1; os Windows/10.0.17763;",
+            "Authorization": "Bearer ...DLG90",
+            "user-agent": "node.js/v12.16.1",
+            "Accept-Encoding": "gzip"
+          },
+          "method": "get"
+        },
+        "requestId": "7298ee66b51bb7a27d355938fc433720"
+      }
+    }
+  }
+]
