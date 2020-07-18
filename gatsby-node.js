@@ -141,7 +141,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        path: i === 0 ? `/md-blog` : `/md-blog/${i + 1}`,
         component: path.resolve('./src/templates/Blog.tsx'),
         context: {
           limit: postsPerPage,
@@ -159,7 +159,7 @@ exports.createPages = ({ actions, graphql }) => {
       const prev = index === posts.length - 1 ? null : posts[index + 1].node;
 
       createPage({
-        path: `/blog/${_.kebabCase(node.frontmatter.title)}`,
+        path: `/md-blog/${_.kebabCase(node.frontmatter.title)}`,
         component: postTemplate,
         context: {
           slug: _.kebabCase(node.frontmatter.title),
