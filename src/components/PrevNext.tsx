@@ -45,13 +45,13 @@ const PrevNext = ({ prev, next }: Props) => {
       {prev && (
         <Prev>
           <span>Previous</span>
-          <Link to={`/md-blog/${kebabCase(prev.frontmatter.title)}`}>{prev.frontmatter.title}</Link>
+          <Link to={`/blog/${kebabCase(prev.frontmatter.title)}`}>{prev.frontmatter.title}</Link>
         </Prev>
       )}
       {next && (
         <Next>
           <span>Next</span>
-          <Link to={`/md-blog/${kebabCase(next.frontmatter.title)}`}>{next.frontmatter.title}</Link>
+          <Link to={`/blog/${kebabCase(next.frontmatter.title)}`}>{next.frontmatter.title}</Link>
         </Next>
       )}
     </Wrapper>

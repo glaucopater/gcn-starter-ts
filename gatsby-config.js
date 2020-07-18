@@ -46,7 +46,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'post',
-        path: `${__dirname}/md-blog`,
+        path: `${__dirname}/blog`,
       },
     },
     {
@@ -113,5 +113,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
+    {
+      resolve: 'gatsby-source-contentful',
+      options:
+        process.env.NODE_ENV === 'development'
+          ? contentfulConfig.development
+          : contentfulConfig.production,
+    },
   ],
 };

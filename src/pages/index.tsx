@@ -82,7 +82,7 @@ export default ({ data }: PageProps) => {
                   Contact
                 </Button>
               </Link>
-              <Link to="/md-blog">
+              <Link to="/blog">
                 <Button big={true}>
                   <svg
                     width="1792"
@@ -98,6 +98,9 @@ export default ({ data }: PageProps) => {
 
               <Link to="/about">
                 <ButtonIcon big={true}>About</ButtonIcon>
+              </Link>
+              <Link to="/contentful">
+                <ButtonIcon big={true}>Contentful blog</ButtonIcon>
               </Link>
             </HomepageContent>
           </GridRow>
@@ -124,7 +127,7 @@ export default ({ data }: PageProps) => {
                 />
               ))}
               <p className={'textRight'}>
-                <Link to={'/md-blog'}>All articles ({totalCount})</Link>
+                <Link to={'/blog'}>All articles ({totalCount})</Link>
               </p>
             </HomepageContent>
           </GridRow>
@@ -135,7 +138,11 @@ export default ({ data }: PageProps) => {
 };
 export const IndexQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
+    allMarkdownRemark(
+      filter: { fields: { slug: { ne: "" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 1
+    ) {
       totalCount
       edges {
         node {
